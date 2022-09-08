@@ -26,11 +26,11 @@ public class NotificationController {
             Student studentToNotify = studentService.getStudentById(payload.getContactId());
             System.out.println("studentToNotify: " + studentToNotify);
             if (studentToNotify == null)
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("I couldn't find the student :(");
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Student not found");
             emailService.sendTo(studentToNotify.getEmail(), payload.getTitle(), payload.getText());
             return ResponseEntity.status(HttpStatus.OK).build();
         }catch(Exception e){
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("The server is broken :(");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Broken server");
         }
     }
 }
