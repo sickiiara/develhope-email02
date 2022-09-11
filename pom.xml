@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>co.develhope</groupId>
-    <artifactId>email01</artifactId>
+    <artifactId>email02</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>email01</name>
-    <description>email01</description>
+    <name>email02</name>
+    <description>email02</description>
     <properties>
         <java.version>18</java.version>
     </properties>
@@ -43,6 +43,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
